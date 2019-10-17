@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = calc1.0.0
-DISTDIR = /home/book/001_qt_prj/01_calc/calc/.tmp/calc1.0.0
+DISTDIR = /home/book/00_work/00_work/001_qt_prj/01_calc/calc/.tmp/calc1.0.0
 LINK          = arm-xilinx-linux-gnueabi-g++ -lts
 LFLAGS        = -Wl,-rpath,/usr/local/qt5.4.1/lib
 LIBS          = $(SUBLIBS) -L/usr/local/tslib/lib -L/usr/local/qt5.4.1/lib -lQt5Widgets -lQt5Gui -lQt5Core -lpthread 
@@ -402,127 +402,7 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../calc/main.cpp /usr/local/qt5.4.1/include/QtWidgets/QApplication \
-		/usr/local/qt5.4.1/include/QtWidgets/qapplication.h \
-		/usr/local/qt5.4.1/include/QtCore/qcoreapplication.h \
-		/usr/local/qt5.4.1/include/QtCore/qglobal.h \
-		/usr/local/qt5.4.1/include/QtCore/qconfig.h \
-		/usr/local/qt5.4.1/include/QtCore/qfeatures.h \
-		/usr/local/qt5.4.1/include/QtCore/qsystemdetection.h \
-		/usr/local/qt5.4.1/include/QtCore/qprocessordetection.h \
-		/usr/local/qt5.4.1/include/QtCore/qcompilerdetection.h \
-		/usr/local/qt5.4.1/include/QtCore/qtypeinfo.h \
-		/usr/local/qt5.4.1/include/QtCore/qtypetraits.h \
-		/usr/local/qt5.4.1/include/QtCore/qsysinfo.h \
-		/usr/local/qt5.4.1/include/QtCore/qlogging.h \
-		/usr/local/qt5.4.1/include/QtCore/qflags.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic.h \
-		/usr/local/qt5.4.1/include/QtCore/qbasicatomic.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_bootstrap.h \
-		/usr/local/qt5.4.1/include/QtCore/qgenericatomic.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_msvc.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_armv7.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_armv6.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_armv5.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_ia64.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_mips.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_x86.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_cxx11.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_gcc.h \
-		/usr/local/qt5.4.1/include/QtCore/qatomic_unix.h \
-		/usr/local/qt5.4.1/include/QtCore/qglobalstatic.h \
-		/usr/local/qt5.4.1/include/QtCore/qmutex.h \
-		/usr/local/qt5.4.1/include/QtCore/qnumeric.h \
-		/usr/local/qt5.4.1/include/QtCore/qstring.h \
-		/usr/local/qt5.4.1/include/QtCore/qchar.h \
-		/usr/local/qt5.4.1/include/QtCore/qbytearray.h \
-		/usr/local/qt5.4.1/include/QtCore/qrefcount.h \
-		/usr/local/qt5.4.1/include/QtCore/qnamespace.h \
-		/usr/local/qt5.4.1/include/QtCore/qarraydata.h \
-		/usr/local/qt5.4.1/include/QtCore/qstringbuilder.h \
-		/usr/local/qt5.4.1/include/QtCore/qobject.h \
-		/usr/local/qt5.4.1/include/QtCore/qobjectdefs.h \
-		/usr/local/qt5.4.1/include/QtCore/qobjectdefs_impl.h \
-		/usr/local/qt5.4.1/include/QtCore/qlist.h \
-		/usr/local/qt5.4.1/include/QtCore/qalgorithms.h \
-		/usr/local/qt5.4.1/include/QtCore/qiterator.h \
-		/usr/local/qt5.4.1/include/QtCore/qbytearraylist.h \
-		/usr/local/qt5.4.1/include/QtCore/qcoreevent.h \
-		/usr/local/qt5.4.1/include/QtCore/qscopedpointer.h \
-		/usr/local/qt5.4.1/include/QtCore/qmetatype.h \
-		/usr/local/qt5.4.1/include/QtCore/qvarlengtharray.h \
-		/usr/local/qt5.4.1/include/QtCore/qcontainerfwd.h \
-		/usr/local/qt5.4.1/include/QtCore/qisenum.h \
-		/usr/local/qt5.4.1/include/QtCore/qobject_impl.h \
-		/usr/local/qt5.4.1/include/QtCore/qeventloop.h \
-		/usr/local/qt5.4.1/include/QtGui/qwindowdefs.h \
-		/usr/local/qt5.4.1/include/QtGui/qwindowdefs_win.h \
-		/usr/local/qt5.4.1/include/QtCore/qpoint.h \
-		/usr/local/qt5.4.1/include/QtCore/qsize.h \
-		/usr/local/qt5.4.1/include/QtGui/qcursor.h \
-		/usr/local/qt5.4.1/include/QtWidgets/qdesktopwidget.h \
-		/usr/local/qt5.4.1/include/QtWidgets/qwidget.h \
-		/usr/local/qt5.4.1/include/QtCore/qmargins.h \
-		/usr/local/qt5.4.1/include/QtGui/qpaintdevice.h \
-		/usr/local/qt5.4.1/include/QtCore/qrect.h \
-		/usr/local/qt5.4.1/include/QtGui/qpalette.h \
-		/usr/local/qt5.4.1/include/QtGui/qcolor.h \
-		/usr/local/qt5.4.1/include/QtGui/qrgb.h \
-		/usr/local/qt5.4.1/include/QtCore/qstringlist.h \
-		/usr/local/qt5.4.1/include/QtCore/qdatastream.h \
-		/usr/local/qt5.4.1/include/QtCore/qiodevice.h \
-		/usr/local/qt5.4.1/include/QtCore/qpair.h \
-		/usr/local/qt5.4.1/include/QtCore/qregexp.h \
-		/usr/local/qt5.4.1/include/QtCore/qstringmatcher.h \
-		/usr/local/qt5.4.1/include/QtGui/qbrush.h \
-		/usr/local/qt5.4.1/include/QtCore/qvector.h \
-		/usr/local/qt5.4.1/include/QtGui/qmatrix.h \
-		/usr/local/qt5.4.1/include/QtGui/qpolygon.h \
-		/usr/local/qt5.4.1/include/QtGui/qregion.h \
-		/usr/local/qt5.4.1/include/QtCore/qline.h \
-		/usr/local/qt5.4.1/include/QtGui/qtransform.h \
-		/usr/local/qt5.4.1/include/QtGui/qpainterpath.h \
-		/usr/local/qt5.4.1/include/QtGui/qimage.h \
-		/usr/local/qt5.4.1/include/QtGui/qpixelformat.h \
-		/usr/local/qt5.4.1/include/QtGui/qpixmap.h \
-		/usr/local/qt5.4.1/include/QtCore/qsharedpointer.h \
-		/usr/local/qt5.4.1/include/QtCore/qshareddata.h \
-		/usr/local/qt5.4.1/include/QtCore/qhash.h \
-		/usr/local/qt5.4.1/include/QtCore/qsharedpointer_impl.h \
-		/usr/local/qt5.4.1/include/QtGui/qfont.h \
-		/usr/local/qt5.4.1/include/QtGui/qfontmetrics.h \
-		/usr/local/qt5.4.1/include/QtGui/qfontinfo.h \
-		/usr/local/qt5.4.1/include/QtWidgets/qsizepolicy.h \
-		/usr/local/qt5.4.1/include/QtGui/qkeysequence.h \
-		/usr/local/qt5.4.1/include/QtGui/qevent.h \
-		/usr/local/qt5.4.1/include/QtCore/qvariant.h \
-		/usr/local/qt5.4.1/include/QtCore/qmap.h \
-		/usr/local/qt5.4.1/include/QtCore/qdebug.h \
-		/usr/local/qt5.4.1/include/QtCore/qtextstream.h \
-		/usr/local/qt5.4.1/include/QtCore/qlocale.h \
-		/usr/local/qt5.4.1/include/QtCore/qset.h \
-		/usr/local/qt5.4.1/include/QtCore/qcontiguouscache.h \
-		/usr/local/qt5.4.1/include/QtCore/qurl.h \
-		/usr/local/qt5.4.1/include/QtCore/qurlquery.h \
-		/usr/local/qt5.4.1/include/QtCore/qfile.h \
-		/usr/local/qt5.4.1/include/QtCore/qfiledevice.h \
-		/usr/local/qt5.4.1/include/QtGui/qvector2d.h \
-		/usr/local/qt5.4.1/include/QtGui/qtouchdevice.h \
-		/usr/local/qt5.4.1/include/QtGui/qguiapplication.h \
-		/usr/local/qt5.4.1/include/QtGui/qinputmethod.h \
-		../calc/qcalculatorui.h \
-		/usr/local/qt5.4.1/include/QtWidgets/QWidget \
-		/usr/local/qt5.4.1/include/QtWidgets/QLineEdit \
-		/usr/local/qt5.4.1/include/QtWidgets/qlineedit.h \
-		/usr/local/qt5.4.1/include/QtWidgets/qframe.h \
-		/usr/local/qt5.4.1/include/QtGui/qtextcursor.h \
-		/usr/local/qt5.4.1/include/QtGui/qtextformat.h \
-		/usr/local/qt5.4.1/include/QtGui/qpen.h \
-		/usr/local/qt5.4.1/include/QtGui/qtextoption.h \
-		/usr/local/qt5.4.1/include/QtWidgets/QPushButton \
-		/usr/local/qt5.4.1/include/QtWidgets/qpushbutton.h \
-		/usr/local/qt5.4.1/include/QtWidgets/qabstractbutton.h \
-		/usr/local/qt5.4.1/include/QtGui/qicon.h
+main.o: ../calc/main.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../calc/main.cpp
 
 qcalculatorui.o: ../calc/qcalculatorui.cpp ../calc/qcalculatorui.h \
